@@ -44,9 +44,14 @@ h1 {
     font-weight: normal;
 }
 h2 {
-    font-size: 1.2em;
-    margin-top: 0;
+    font-size: 2.5em;
     font-weight: bold;
+    text-align: left;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
 }
 h3 {
     font-size: 1.4em;
@@ -65,9 +70,6 @@ div.line-break {
 }
 article {
     margin: 0 1em;
-}
-img {
-    width: 200px;
 }
 ul {
     text-align: left;
