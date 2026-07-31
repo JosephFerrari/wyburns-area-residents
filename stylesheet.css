@@ -89,7 +89,7 @@ img.map {
     width: calc(100% + 16px);
     margin: 0 -8px;
 }
-p a {
+article > p a {
     color: #676767;
     font-style: italic;
     text-decoration: underline;
@@ -115,4 +115,28 @@ a.button.icon.facebook {
 }
 a.button.icon.mailing-list {
     background-image: url("icons/envelope.svg");
+}
+a.document {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding-left: calc(2em + 5px);
+    background-size: 2em;
+    background-image: url("icons/filetype-pdf.svg");
+}
+a.document p {
+    margin: 0;
+}
+a.document p:first-child {
+    color: #5d91ff;
+    text-decoration: underline;
+}
+a.document:visited p:first-child {
+    color: #ac54ff;
+}
+a.document p i {
+    font-size: 0.8em;
+    color: #676767;
 }
