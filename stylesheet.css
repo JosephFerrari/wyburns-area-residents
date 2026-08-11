@@ -122,9 +122,8 @@ a.document {
     text-decoration: none;
     background-repeat: no-repeat;
     background-position: 0 center;
-    padding-left: calc(2em + 5px);
+    padding-left: calc(2em + 8px);
     background-size: 2em;
-    background-image: url("icons/filetype-pdf.svg");
 }
 a.document p {
     margin: 0;
@@ -139,4 +138,10 @@ a.document:visited p:first-child {
 a.document p i {
     font-size: 0.8em;
     color: #676767;
+}
+a.document.pdf {
+    background-image: url("icons/filetype-pdf.svg");
+}
+a.document.news {
+    background-image: url("icons/newspaper.svg");
 }
