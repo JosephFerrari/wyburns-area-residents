@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Old Stamper";
+    src: url("../fonts/old-stamper.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter-italic.ttf") format("truetype");
+    font-style: italic;
+}
+@font-face {
+    font-family: "Noto Serif";
+    src: url("../fonts/noto-serif.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Noto Serif";
+    src: url("../fonts/noto-serif-italic.ttf") format("truetype");
+    font-style: italic;
+}
+body {
+    font-family: "Inter";
+}
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1em;
+}
+img.letterhead {
+    height: 8em;
+}
+header span:empty {
+    width: 0;
+    flex-grow: 1;
+}
+header * {
+    margin: 0;
+}
+div.line-break {
+    width: 100%;
+    border-top: 1px solid #000;
+    margin: 2em 0;
+}
+span.red {
+    color: #ff2424;
+}
+img {
+    max-width: 100%;
+}
+@media screen {
+    body {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em;
+    }
+    article {
+        width: 100%;
+    }
+    footer {
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        margin-top: 2em;
+        margin-bottom: -2em;
+        padding: 2em;
+        text-align: center;
+    }
+    button {
+        display: inline-block;
+        padding: 15px 20px;
+        margin:  0.5em 1em;
+        background-color: #dd2424;
+        color: #fff;
+        font-size: 1em;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button.icon {
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        padding-left: calc(2em + 25px);
+        background-size: 2em;
+    }
+    button.icon.print {
+        background-color: #007c1f;
+        background-image: url("../icons/printer.svg");
+    }
+    @media (min-width: 768px) {
+        article {
+            width: 750px;
+        }
+    }
+    @media (min-width: 1024px) {
+        article {
+            width: 960px;
+        }
+    }
+    @media (max-width: 768px) {
+        header {
+            justify-content: center;
+        }
+        header:first-child {
+            margin: 0 -2em;
+        }
+        article > header {
+            flex-direction: column;
+            text-align: center;
+            gap: 0;
+        }
+        header * {
+            align-self: inherit !important;
+        }
+    }
+    @media (max-width: 350px) {
+        h1 {
+            font-size: 1.5em;
+        }
+        img.letterhead {
+            height: 6em;
+        }
+    }
+    .print-only {
+        display: none;
+    }
+}
+@media print
+{
+    body {
+        font-size: 12pt;
+    }   
+    footer {
+        display: none;
+    }
+}
