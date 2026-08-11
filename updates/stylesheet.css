@@ -111,8 +111,10 @@ img {
         }
         article > header {
             flex-direction: column;
-            text-align: center;
             gap: 0;
+        }
+        article > header:not(:first-child) {
+            text-align: center;
         }
         header * {
             align-self: inherit !important;
