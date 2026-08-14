@@ -7,7 +7,7 @@
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
         <title>Wyburns Area Residents</title>
-        <link rel="stylesheet" href="stylesheet.css?v=3">
+        <link rel="stylesheet" href="stylesheet.css?v=4">
         <link rel="icon" type="image/png" href="/icons/favicon-96x96.png?v=2" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg?v=2" />
         <link rel="shortcut icon" href="/icons/favicon.ico?v=2" />
@@ -15,6 +15,23 @@
         <meta name="apple-mobile-web-app-title" content="Wyburns" />
         <link rel="manifest" href="/icons/site.webmanifest?v=2" />
     </head>
+    <script>
+        var currentDate = new Date();
+        var greenBeltAssessmentDeadline = new Date("2026-08-27");
+        var greenBeltAssessmentDays = Math.ceil((greenBeltAssessmentDeadline - currentDate) / (1000 * 60 * 60 * 24));
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("1").textContent = "Deadline for objections is in";
+            document.getElementById("2").textContent = greenBeltAssessmentDays + " DAYS";
+            document.getElementById("3").style.display = "inline";
+        });
+        var planningApplicationDeadline = new Date("2026-09-02");
+        var planningApplicationDays = Math.ceil((planningApplicationDeadline - currentDate) / (1000 * 60 * 60 * 24));
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("4").textContent = "Deadline for objections is in";
+            document.getElementById("5").textContent = planningApplicationDays + " DAYS";
+            document.getElementById("6").style.display = "inline";
+        });
+    </script>
     <body>
         <div class="container">
             <br />
@@ -33,6 +50,21 @@
             </article>
             <div class="line-break"></div>
             <br />-->
+            <br />
+            <h3>Rochford District Council have drafted a<br /><span class="green" style="font-size: 1.6em;">GREEN BELT ASSESSMENT</span><br />proposing Lower Wyburns Farm as<br /><span class="red" style="font-size: 1.6em;">GREYBELT</span></h3>
+            <h3><span id="1">Deadline for objections is</span><br /><span id="2" class="red" style="font-size: 1.6em;">27/08/2026</span><span id="3" style="display: none;"><br />(27/08/2026)</span></h3>
+            <!--<a class="button">Click here to learn how to object</a><br />
+            <br />-->
+            <br />
+            <div class="line-break"></div>
+            <br />
+            <h3>Bellway have submitted their<br /><span class="red" style="font-size: 1.6em;">PLANNING APPLICATION</span></h3>
+            <h3><span id="4">Deadline for objections is</span><br /><span id="5" class="red" style="font-size: 1.6em;">02/09/2026</span><span id="6" style="display: none;"><br />(02/09/2026)</span></h3>
+            <!--<a class="button">Click here to learn how to object</a><br />
+            <br />-->
+            <br />
+            <div class="line-break"></div>
+            <br />
             <h3><span class="red" style="font-size: 1.6em;">94 houses</span><br />are being proposed on<br />Lower Wyburns Farm,<br />Daws Heath Road.</h3>
             <br />
             <h3>We believe the plans are<br /><span class="red" style="font-size: 1.6em;">unsustainable</span><br />and we need <span class="red">your</span> help<br />to challenge them.</h3>

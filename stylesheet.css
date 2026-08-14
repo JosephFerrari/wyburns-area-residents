@@ -46,6 +46,9 @@ body {
 span.red {
     color: #ff2424;
 }
+span.green {
+    color: #2bde5f;
+}
 h1 {
     font-family: "Old Stamper";
     font-size: 6em;
