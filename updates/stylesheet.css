@@ -47,6 +47,12 @@ div.line-break {
 span.red {
     color: #ff2424;
 }
+span.blue, a {
+    color: #0000ee;
+}
+span.highlight.yellow {
+    background-color: #ffff00;
+}
 img {
     max-width: 100%;
 }
