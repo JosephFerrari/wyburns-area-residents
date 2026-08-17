@@ -42,6 +42,14 @@ body {
     .container {
         width: 960px;
     }
+    .mobile-only {
+        display: none;
+    }
+}
+@media (max-width: 1023px) {
+    .desktop-only {
+        display: none;
+    }
 }
 span.red {
     color: #ff2424;
@@ -132,11 +140,11 @@ a.document p {
     margin: 0;
 }
 a.document p:first-child {
-    color: #5d91ff;
+    color: #7ca5ff;
     text-decoration: underline;
 }
 a.document:visited p:first-child {
-    color: #ac54ff;
+    color: #bb73ff;
 }
 a.document p i {
     font-size: 0.8em;
@@ -147,4 +155,39 @@ a.document.pdf {
 }
 a.document.news {
     background-image: url("icons/newspaper.svg");
+}
+table {
+    display: inline-block;
+    border-collapse: collapse;
+}
+tr, td, th {
+    border: solid 1px #fff;
+    padding: 0.5em;
+    text-align: left;
+}
+table.mobile-only :is(td, th) {
+    border-top: none;
+    border-bottom: none;
+}
+table.mobile-only tr:not(:first-child) {
+    border-top: none;
+}
+table.mobile-only tr:not(:last-child) {
+    border-bottom: none;
+}
+table.mobile-only tr:not(:first-child) :is(td, th) {
+    padding-top: 0.25em;
+}
+table.mobile-only tr:not(:last-child) :is(td, th) {
+    padding-bottom: 0.25em;
+}
+table.mobile-only td {
+    word-break: break-all;
+}
+a:not(.button):not(.document) {
+    color: #7ca5ff;
+    text-decoration: underline;
+}
+a:not(.button):not(.document):visited {
+    color: #bb73ff;
 }
