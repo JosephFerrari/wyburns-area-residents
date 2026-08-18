@@ -191,3 +191,7 @@ a:not(.button):not(.document) {
 a:not(.button):not(.document):visited {
     color: #bb73ff;
 }
+a.no-style {
+    text-decoration: inherit !important;
+    color: inherit !important;
+}
