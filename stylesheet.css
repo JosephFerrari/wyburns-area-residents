@@ -164,6 +164,7 @@ tr, td, th {
     border: solid 1px #fff;
     padding: 0.5em;
     text-align: left;
+    vertical-align: top;
 }
 table.mobile-only :is(td, th) {
     border-top: none;
