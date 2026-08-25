@@ -20,16 +20,48 @@
         var greenBeltAssessmentDeadline = new Date("2026-08-27");
         var greenBeltAssessmentDays = Math.ceil((greenBeltAssessmentDeadline - currentDate) / (1000 * 60 * 60 * 24));
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("1").textContent = "Deadline for objections is in";
-            document.getElementById("2").textContent = greenBeltAssessmentDays + " DAYS";
-            document.getElementById("3").style.display = "inline";
+            if (greenBeltAssessmentDays >= 2) {
+                document.getElementById("1").textContent = "Deadline for objections is in";
+                document.getElementById("2").textContent = greenBeltAssessmentDays + " DAYS";
+                document.getElementById("3").style.display = "inline";
+            }
+            else if (greenBeltAssessmentDays == 1) {
+                document.getElementById("1").textContent = "Deadline for objections is";
+                document.getElementById("2").textContent = "TOMORROW";
+                document.getElementById("3").style.display = "inline";
+            }
+            else if (greenBeltAssessmentDays == 0) {
+                document.getElementById("1").textContent = "Deadline for objections is";
+                document.getElementById("2").textContent = "TODAY";
+                document.getElementById("3").style.display = "inline";
+            }
+            else {
+                document.getElementById("1").textContent = "Deadline for objections has passed";
+                document.getElementById("2").textContent = "";
+            }
         });
         var planningApplicationDeadline = new Date("2026-09-07");
         var planningApplicationDays = Math.ceil((planningApplicationDeadline - currentDate) / (1000 * 60 * 60 * 24));
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("4").textContent = "Deadline for objections is in";
-            document.getElementById("5").textContent = planningApplicationDays + " DAYS";
-            document.getElementById("6").style.display = "inline";
+            if (planningApplicationDays >= 2) {
+                document.getElementById("4").textContent = "Deadline for objections is in";
+                document.getElementById("5").textContent = planningApplicationDays + " DAYS";
+                document.getElementById("6").style.display = "inline";
+            }
+            else if (planningApplicationDays == 1) {
+                document.getElementById("4").textContent = "Deadline for objections is";
+                document.getElementById("5").textContent = "TOMORROW";
+                document.getElementById("6").style.display = "inline";
+            }
+            else if (planningApplicationDays == 0) {
+                document.getElementById("4").textContent = "Deadline for objections is";
+                document.getElementById("5").textContent = "TODAY";
+                document.getElementById("6").style.display = "inline";
+            }
+            else {
+                document.getElementById("4").textContent = "Deadline for objections has passed";
+                document.getElementById("5").textContent = "";
+            }
         });
     </script>
     <body>
