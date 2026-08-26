@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <title>Wyburns Area Residents</title>
+        <link rel="stylesheet" href="stylesheet.css?v=7">
+        <link rel="icon" type="image/png" href="/icons/favicon-96x96.png?v=2" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg?v=2" />
+        <link rel="shortcut icon" href="/icons/favicon.ico?v=2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=2" />
+        <meta name="apple-mobile-web-app-title" content="Wyburns" />
+        <link rel="manifest" href="/icons/site.webmanifest?v=2" />
+    </head>
+    <script>
+        var currentDate = new Date();
+        var greenBeltAssessmentDeadline = new Date("2026-08-27");
+        var greenBeltAssessmentDays = Math.ceil((greenBeltAssessmentDeadline - currentDate) / (1000 * 60 * 60 * 24));
+        document.addEventListener("DOMContentLoaded", function() {
+            if (greenBeltAssessmentDays >= 2) {
+                document.getElementById("1").textContent = "Deadline for objections is in";
+                document.getElementById("2").textContent = greenBeltAssessmentDays + " DAYS";
+                document.getElementById("3").style.display = "inline";
+            }
+            else if (greenBeltAssessmentDays == 1) {
+                document.getElementById("1").textContent = "Deadline for objections is";
+                document.getElementById("2").textContent = "TOMORROW";
+                document.getElementById("3").style.display = "inline";
+            }
+            else if (greenBeltAssessmentDays == 0) {
+                document.getElementById("1").textContent = "Deadline for objections is";
+                document.getElementById("2").textContent = "TODAY";
+                document.getElementById("3").style.display = "inline";
+            }
+            else {
+                document.getElementById("1").textContent = "Deadline for objections has passed";
+                document.getElementById("2").textContent = "";
+            }
+        });
+        var planningApplicationDeadline = new Date("2026-09-07");
+        var planningApplicationDays = Math.ceil((planningApplicationDeadline - currentDate) / (1000 * 60 * 60 * 24));
+        document.addEventListener("DOMContentLoaded", function() {
+            if (planningApplicationDays >= 2) {
+                document.getElementById("4").textContent = "Deadline for objections is in";
+                document.getElementById("5").textContent = planningApplicationDays + " DAYS";
+                document.getElementById("6").style.display = "inline";
+            }
+            else if (planningApplicationDays == 1) {
+                document.getElementById("4").textContent = "Deadline for objections is";
+                document.getElementById("5").textContent = "TOMORROW";
+                document.getElementById("6").style.display = "inline";
+            }
+            else if (planningApplicationDays == 0) {
+                document.getElementById("4").textContent = "Deadline for objections is";
+                document.getElementById("5").textContent = "TODAY";
+                document.getElementById("6").style.display = "inline";
+            }
+            else {
+                document.getElementById("4").textContent = "Deadline for objections has passed";
+                document.getElementById("5").textContent = "";
+            }
+        });
+    </script>
+    <style>
+        body {
+            padding: 2em;
+            margin: 0;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 0.5em;
+        }
+        button, a.button {
+            width: fit-content;
+        }
+        .rotate {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        div.line-break {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.line-break p {
+            background: #000;
+            border: solid 0.3em #000;
+        }
+        .rotate {
+            height: 13em;
+        }
+        .rotate div:not(.line-break) {
+            padding: 1em;
+        }
+        @media (max-width: 1024px) { /* tablet */
+
+        }
+        @media (max-width: 768px) { /* mobile */
+            @media (orientation: landscape) {
+                h2 br {
+                    display: none;
+                }
+            }
+            .rotate {
+                flex-direction: column;
+                height: 29em;
+            }
+        }
+        @media (min-width: 768px) { /* computer */
+            .rotate div.line-break {
+                height: 100%;
+                width: 1px;
+                background: linear-gradient(to bottom, transparent, #fff, transparent);
+                margin: 0 20px;
+            }
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h2><a class="no-style" href="https://wyburns-area-residents.org.uk">Wyburns <br />Area <br />Residents</a></h2>
+            <div class="line-break"></div>
+            <p style="text-align: justify;">There are plans to build 94 houses and flats on Lower Wyburns Farm. This would mean potentially hundreds more cars using Daws Heath Road and worsening traffic on the Rayleigh Weir and the A127. It would also increase stress on Rayleigh's already overburdened public services, such as schools and GPs. We want to fight these plans, but we need your help. Please keep reading for a step by step on how to participate.</p>
+            <p style="text-align: justify;">We are fighting on two fronts. Firstly, a report has been drafted on behalf of Rochford Council that proposes Lower Wyburns Farm should be reclassified from Green Belt to Grey Belt. Secondly, a planning application has been submitted by Bellway to build 94 houses and flats on Lower Wyburns Farm. We need you to submit objections to both of these proposals. To find out how, please click one of the below buttons.</p>
+            <div class="line-break"></div>
+            <div class="rotate">
+                <div>
+                    <a class="button" href="object/grey-belt" target="_blank">GREY BELT<br />OBJECTIONS<br />EASY GUIDE</a>
+                    <p>You have until 10/9/2026 to object.<br />That's 15 days.</p>
+                </div>
+                <div class="line-break"><p>and</p></div>
+                <div>
+                    <a class="button" href="object/planning-application" target="_blank">PLANNING<br />OBJECTIONS<br />EASY GUIDE</a>
+                    <p>You have until 7/9/2026 to object.<br />That's 12 days.</p>
+                </div>
+            </div>
+            <div class="line-break"></div>
+            <p>Please contact us if you have any questions:</p>
+            <p>Email: <a href="mailto:wyburnsactiongroup@gmail.com">wyburnsactiongroup@gmail.com</a></p>
+        </div>
+    </body>
+</html>
