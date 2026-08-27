@@ -17,58 +17,18 @@
     </head>
     <script>
         var currentDate = new Date();
-        var greenBeltAssessmentDeadline = new Date("2026-08-27");
+        var greenBeltAssessmentDeadline = new Date("2026-09-07");
         var greenBeltAssessmentDays = Math.ceil((greenBeltAssessmentDeadline - currentDate) / (1000 * 60 * 60 * 24));
         document.addEventListener("DOMContentLoaded", function() {
-            if (greenBeltAssessmentDays >= 2) {
-                document.getElementById("1").textContent = "Deadline for objections is in";
-                document.getElementById("2").textContent = greenBeltAssessmentDays + " DAYS";
-                document.getElementById("3").style.display = "inline";
-            }
-            else if (greenBeltAssessmentDays == 1) {
-                document.getElementById("1").textContent = "Deadline for objections is";
-                document.getElementById("2").textContent = "TOMORROW";
-                document.getElementById("3").style.display = "inline";
-            }
-            else if (greenBeltAssessmentDays == 0) {
-                document.getElementById("1").textContent = "Deadline for objections is";
-                document.getElementById("2").textContent = "TODAY";
-                document.getElementById("3").style.display = "inline";
-            }
-            else {
-                document.getElementById("1").textContent = "Deadline for objections has passed";
-                document.getElementById("2").textContent = "";
-            }
+            document.getElementById("1a").style.display = "inline";
+            document.getElementById("1b").textContent = greenBeltAssessmentDays;
         });
         var planningApplicationDeadline = new Date("2026-09-07");
         var planningApplicationDays = Math.ceil((planningApplicationDeadline - currentDate) / (1000 * 60 * 60 * 24));
         document.addEventListener("DOMContentLoaded", function() {
-            if (planningApplicationDays >= 2) {
-                document.getElementById("4").textContent = "Deadline for objections is in";
-                document.getElementById("5").textContent = planningApplicationDays + " DAYS";
-                document.getElementById("6").style.display = "inline";
-            }
-            else if (planningApplicationDays == 1) {
-                document.getElementById("4").textContent = "Deadline for objections is";
-                document.getElementById("5").textContent = "TOMORROW";
-                document.getElementById("6").style.display = "inline";
-            }
-            else if (planningApplicationDays == 0) {
-                document.getElementById("4").textContent = "Deadline for objections is";
-                document.getElementById("5").textContent = "TODAY";
-                document.getElementById("6").style.display = "inline";
-            }
-            else {
-                document.getElementById("4").textContent = "Deadline for objections has passed";
-                document.getElementById("5").textContent = "";
-            }
+            document.getElementById("2a").style.display = "inline";
+            document.getElementById("2b").textContent = planningApplicationDays;
         });
-        function test() {
-            console.log(document.querySelectorAll("a.button").forEach((element) =>
-            {
-                element.href = "mailto:planning.applications@rochford.gov.uk?bcc=wyburnsactiongroup@gmail.com&subject=Objection%20to%20grey%20belt%20proposal&body=Dear%20sir%20or%20madam,%0A%0AI%20have%20read%20the%20document%20linked%20below%20and%20understand%20and%20support%20its%20contents.%20Please%20consider%20it%20my%20objection.%0A%0Ahttps://wyburns-area-residents/objections.pdf%0A%0AThank%20you,%0A" + document.getElementById("name").value.replace(" ", "%20");
-            }));
-        }
     </script>
     <style>
         body {
@@ -102,6 +62,7 @@
         }
         .rotate div:not(.line-break) {
             padding: 1em;
+            flex-grow: 1;
         }
         @media (max-width: 1024px) { /* tablet */
 
@@ -133,24 +94,22 @@
             <p style="text-align: justify;">There are plans to build 94 houses and flats on Lower Wyburns Farm. This would mean potentially hundreds more cars using Daws Heath Road and worsening traffic on the Rayleigh Weir and the A127. It would also increase stress on Rayleigh's already overburdened public services, such as schools and GPs. We want to fight these plans, but we need your help. Please keep reading for a step by step on how to participate.</p>
             <p style="text-align: justify;">We are fighting on two fronts. Firstly, a report has been drafted on behalf of Rochford Council that proposes Lower Wyburns Farm should be reclassified from Green Belt to Grey Belt. Secondly, a planning application has been submitted by Bellway to build 94 houses and flats on Lower Wyburns Farm. We need you to submit objections to both of these proposals. To find out how, please click one of the below buttons.</p>
             <div class="line-break"></div>
-            <input type="text" placeholder="Enter your name" id="name" onchange="test()" />
-            <div class="line-break"></div>
             <div class="rotate">
                 <div>
-                    <a class="button" href="mailto:planning.applications@rochford.gov.uk?bcc=wyburnsactiongroup@gmail.com&subject=Objection%20to%20grey%20belt%20proposal&body=Dear%20sir%20or%20madam,%0A%0AI%20have%20read%20the%20document%20linked%20below%20and%20understand%20and%20support%20its%20contents.%20Please%20consider%20it%20my%20objection.%0A%0Ahttps://wyburns-area-residents/objections.pdf%0A%0AThank%20you,%0A
-                concerned%20resident">GREY BELT<br />OBJECTIONS<br />EASY GUIDE</a>
-                    <p>You have until 10/9/2026 to object.<br />That's 15 days.</p>
+                    <a class="button" href="object/grey-belt">GREY BELT<br />OBJECTIONS<br />EASY GUIDE</a>
+                    <p>You have until 7/9/2026 to object.<span id="1a" style="display: none;"><br />That's <span id="1b"></span> days.</span></p>
                 </div>
                 <div class="line-break"><p>and</p></div>
                 <div>
-                    <a class="button" href="mailto:planning.applications@rochford.gov.uk?bcc=wyburnsactiongroup@gmail.com&subject=Objection%20to%20planning%20application&body=Dear%20sir%20or%20madam,%0A%0AI%20have%20read%20the%20document%20linked%20below%20and%20understand%20and%20support%20its%20contents.%20Please%20consider%20it%20my%20objection.%0A%0Ahttps://wyburns-area-residents/objections.pdf%0A%0AThank%20you,%0A
-                concerned%20resident">PLANNING<br />OBJECTIONS<br />EASY GUIDE</a>
-                    <p>You have until 7/9/2026 to object.<br />That's 12 days.</p>
+                    <a class="button" href="object/planning-application">PLANNING<br />OBJECTIONS<br />EASY GUIDE</a>
+                    <p>You have until 7/9/2026 to object.<span id="2a" style="display: none;"><br />That's <span id="2b"></span> days.</span></p>
                 </div>
             </div>
             <div class="line-break"></div>
             <p>Please contact us if you have any questions:</p>
             <p>Email: <a href="mailto:wyburnsactiongroup@gmail.com">wyburnsactiongroup@gmail.com</a></p>
+            <br />
+            <p><a href="https://wyburns-area-residents.org.uk">Click here</a> to visit our homepage.</p>
         </div>
     </body>
 </html>
