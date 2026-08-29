@@ -7,7 +7,7 @@
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
         <title>Wyburns Area Residents</title>
-        <link rel="stylesheet" href="stylesheet.css?v=7">
+        <link rel="stylesheet" href="stylesheet.css?v=8">
         <link rel="icon" type="image/png" href="/icons/favicon-96x96.png?v=2" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg?v=2" />
         <link rel="shortcut icon" href="/icons/favicon.ico?v=2" />
@@ -17,7 +17,7 @@
     </head>
     <script>
         var currentDate = new Date();
-        var greenBeltAssessmentDeadline = new Date("2026-08-27");
+        /*var greenBeltAssessmentDeadline = new Date("2026-09-07");
         var greenBeltAssessmentDays = Math.ceil((greenBeltAssessmentDeadline - currentDate) / (1000 * 60 * 60 * 24));
         document.addEventListener("DOMContentLoaded", function() {
             if (greenBeltAssessmentDays >= 2) {
@@ -39,7 +39,7 @@
                 document.getElementById("1").textContent = "Deadline for objections has passed";
                 document.getElementById("2").textContent = "";
             }
-        });
+        });*/
         var planningApplicationDeadline = new Date("2026-09-07");
         var planningApplicationDays = Math.ceil((planningApplicationDeadline - currentDate) / (1000 * 60 * 60 * 24));
         document.addEventListener("DOMContentLoaded", function() {
@@ -64,27 +64,260 @@
             }
         });
     </script>
+    <style>
+        body {
+            padding: 2em;
+            margin: 0;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 0.5em;
+        }
+        div.banner {
+            padding: 1em;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #cd1313;
+            overflow: hidden;
+        }
+        div.banner :is(p, h2) {
+            margin: 0;
+            filter: drop-shadow(2px 2px 0px black);
+        }
+    </style>
     <body>
         <div class="container">
-            <br />
-            <br />
             <h2><a class="no-style" href="https://wyburns-area-residents.org.uk">Wyburns<br />Area<br />Residents</a></h2>
             <br />
+            <div class="banner">
+                <h2>COMMUNITY MEETING</h3>
+                <p>Thursday 3rd September 7.00 p.m.</p>
+                <p>Methodist Church, Eastwood Road, Rayleigh SS6 7JP</p>
+            </div>
+            <p>
+                This meeting will outline how to submit an effective objection and give residents the chance to raise concerns.<br />
+                The agenda will be published here and on <a href="https://www.facebook.com/groups/1343149551169669" target="_blank">Facebook</a> in advance of the meeting.
+            </p>
             <div class="line-break"></div>
-            <!--<article>
-                <h4>Latest update - 2<sup>nd</sup> July 2026</h4>
-                <p><i>(This is only an example of what an update might look like. The application has not actually been submitted yet.)</i></p>
-                <p>The application has been submitted. We have until the 23<sup>rd</sup> July 2026 to respond.</p>
-                <p>The more responses the council receive objecting to the application, the better our chances of stopping it.</p>
-                <p>Responses are more valuable if the reasons for objection are stronger. Please read our guide on how to write a strong response below:</p>
-                <a class="button" href="response-guide">Read our response guide</a>
-                <p><a href="updates">Click here to read older updates ></a></p>
-            </article>
+            <br />
+            <h3>Bellway have submitted their<br /><span class="red" style="font-size: 1.6em;">PLANNING APPLICATION</span></h3>
+            <h3><span id="4">Deadline for objections is</span><br /><span id="5" class="red" style="font-size: 1.6em;">7/9/2026</span><span id="6" style="display: none;"><br />(7/9/2026)</span></h3>
+            <p>Bellway have submitted their planning application and supporting documents for 94 houses and flats to be built over Lower Wyburns Farm. It can be found here:</p>
+            <a class="button" href="https://maps.rochford.gov.uk/DevelopmentControl.aspx?RequestType=ParseTemplate&template=DevelopmentControlApplication&basepage=developmentcontrol.aspx&Filter=^REFVAL^=%2726/00538/FUL%27" target="_blank">See application details</a>
+            <a class="button" href="https://planningdocs.rochford.gov.uk/Planning/planning-documents?SDescription=26/00538/FUL" target="_blank">View planning documents</a><br />
+            <p>Please use the button below to object to application 26/00538/FUL</p>
+            <a class="button" href="https://maps.rochford.gov.uk/DevelopmentControl.aspx?requesttype=parsetemplate&template=DevelopmentControlApplicationComments.tmplt&basepage=developmentcontrol.aspx&Filter=^REFVAL^=%2726/00538/FUL%27" target="_blank">Click here to object</a><br />
+            <p>You can also email <a href="mailto:planning.applications@rochford.gov.uk">planning.applications@rochford.gov.uk</a> with your objection, as well as contacting local councillors, who are listed below:</p>
+            <table class="desktop-only">
+                <thead>
+                    <tr>
+                        <th>Person</th>
+                        <th>Party</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.rayleightowncouncil.gov.uk/people/dave-sperring/" target="_blank">Cllr Dave Sperring</a></td>
+                        <td>Conservative</td>
+                        <td><a href="mailto:CllrDave.Sperring@rochford.gov.uk">CllrDave.Sperring@rochford.gov.uk</a><br /><a href="mailto:CllrDave.Sperring@rayleightowncouncil.gov.uk">CllrDave.Sperring@rayleightowncouncil.gov.uk</a></td>
+                        <td><a href="tel:01268 774181">01268 774181</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=142" target="_blank">Cllr Ian Wilson</a></td>
+                        <td>Independent</td>
+                        <td><a href="mailto:CllrIan.Wilson@rochford.gov.uk">CllrIan.Wilson@rochford.gov.uk</a><br /><a href="mailto:CllrIan.Wilson@rayleightowncouncil.gov.uk">CllrIan.Wilson@rayleightowncouncil.gov.uk</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=139" target="_blank">Cllr Ian Ward</a></td>
+                        <td>Conservative</td>
+                        <td><a href="mailto:CllrIan.Ward@rochford.gov.uk">CllrIan.Ward@rochford.gov.uk</a><br /><a href="mailto:CllrIan.Ward@rayleightowncouncil.gov.uk">CllrIan.Ward@rayleightowncouncil.gov.uk</a></td>
+                        <td><a href="tel:07930 337598">07930 337598</a><br /><a href="tel:01268 770895">01268 770895</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=129" target="_blank">Cllr Robert Milne</a></td>
+                        <td>Independent</td>
+                        <td><a href="mailto:CllrBob.Milne@rochford.gov.uk">CllrBob.Milne@rochford.gov.uk</a><br /><a href="mailto:CllrRobert.Milne@rayleightowncouncil.gov.uk">CllrRobert.Milne@rayleightowncouncil.gov.uk</a></td>
+                        <td><a href="tel:07716 030781">07716 030781</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=108" target="_blank">Cllr James Newport</a></td>
+                        <td>Liberal Democrat</td>
+                        <td><a href="mailto:CllrJames.Newport@rochford.gov.uk">CllrJames.Newport@rochford.gov.uk</a><br /><a href="mailto:CllrJames.Newport@rayleightowncouncil.gov.uk">CllrJames.Newport@rayleightowncouncil.gov.uk</a></td>
+                        <td><a href="tel:07494226807">07494226807</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=109" target="_blank">Cllr Chris Stanley</a></td>
+                        <td>Liberal Democrat</td>
+                        <td><a href="mailto:CllrChris.Stanley@rochford.gov.uk">CllrChris.Stanley@rochford.gov.uk</a><br /><a href="mailto:CllrChris.Stanley@rayleightowncouncil.gov.uk">CllrChris.Stanley@rayleightowncouncil.gov.uk</a></td>
+                        <td><a href="tel:07720426359">07720426359</a><br /><a href="tel:01268 785732">01268 785732</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=110" target="_blank">Cllr Daniel Efde</a></td>
+                        <td>Conservative</td>
+                        <td><a href="mailto:CllrDaniel.Efde@rochford.gov.uk">CllrDaniel.Efde@rochford.gov.uk</a></td>
+                        <td><a href="tel:07983 983982">07983 983982</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=382" target="_blank">Cllr Angela Sutton</a></td>
+                        <td>Reform</td>
+                        <td><a href="mailto:CllrAngela.Sutton@rochford.gov.uk">CllrAngela.Sutton@rochford.gov.uk</a></td>
+                        <td><a href="tel:07414248544">07414248544</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="mobile-only">
+                <tbody>
+                    <tr>
+                        <th>Person</th>
+                        <td><a href="https://www.rayleightowncouncil.gov.uk/people/dave-sperring/" target="_blank">Cllr Dave Sperring</a></td>
+                    </tr>
+                    <tr>
+                        <th>Party</th>
+                        <td>Conservative</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:CllrDave.Sperring@rochford.gov.uk">CllrDave.Sperring@rochford.gov.uk</a><br /><a href="mailto:CllrDave.Sperring@rayleightowncouncil.gov.uk">CllrDave.Sperring@rayleightowncouncil.gov.uk</a></td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td><a href="tel:01268 774181">01268 774181</a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Person</th>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=142" target="_blank">Cllr Ian Wilson</a></td>
+                    </tr>
+                    <tr>
+                        <th>Party</th>
+                        <td>Independent</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:CllrIan.Wilson@rochford.gov.uk">CllrIan.Wilson@rochford.gov.uk</a><br /><a href="mailto:CllrIan.Wilson@rayleightowncouncil.gov.uk">CllrIan.Wilson@rayleightowncouncil.gov.uk</a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Person</th>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=139" target="_blank">Cllr Ian Ward</a></td>
+                    </tr>
+                    <tr>
+                        <th>Party</th>
+                        <td>Conservative</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:CllrIan.Ward@rochford.gov.uk">CllrIan.Ward@rochford.gov.uk</a><br /><a href="mailto:CllrIan.Ward@rayleightowncouncil.gov.uk">CllrIan.Ward@rayleightowncouncil.gov.uk</a></td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td><a href="tel:07930 337598">07930 337598</a><br /><a href="tel:01268 770895">01268 770895</a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Person</th>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=129" target="_blank">Cllr Robert Milne</a></td>
+                    </tr>
+                    <tr>
+                        <th>Party</th>
+                        <td>Independent</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:CllrBob.Milne@rochford.gov.uk">CllrBob.Milne@rochford.gov.uk</a><br /><a href="mailto:CllrRobert.Milne@rayleightowncouncil.gov.uk">CllrRobert.Milne@rayleightowncouncil.gov.uk</a></td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td><a href="tel:07716 030781">07716 030781</a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Person</th>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=108" target="_blank">Cllr James Newport</a></td>
+                    </tr>
+                    <tr>
+                        <th>Party</th>
+                        <td>Liberal Democrat</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:CllrJames.Newport@rochford.gov.uk">CllrJames.Newport@rochford.gov.uk</a><br /><a href="mailto:CllrJames.Newport@rayleightowncouncil.gov.uk">CllrJames.Newport@rayleightowncouncil.gov.uk</a></td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td><a href="tel:07494226807">07494226807</a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Person</th>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=109" target="_blank">Cllr Chris Stanley</a></td>
+                    </tr>
+                    <tr>
+                        <th>Party</th>
+                        <td>Liberal Democrat</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:CllrChris.Stanley@rochford.gov.uk">CllrChris.Stanley@rochford.gov.uk</a><br /><a href="mailto:CllrChris.Stanley@rayleightowncouncil.gov.uk">CllrChris.Stanley@rayleightowncouncil.gov.uk</a></td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td><a href="tel:07720426359">07720426359</a><br /><a href="tel:01268 785732">01268 785732</a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Person</th>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=110" target="_blank">Cllr Daniel Efde</a></td>
+                    </tr>
+                    <tr>
+                        <th>Party</th>
+                        <td>Conservative</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:CllrDaniel.Efde@rochford.gov.uk">CllrDaniel.Efde@rochford.gov.uk</a></td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td><a href="tel:07983 983982">07983 983982</a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Person</th>
+                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=382" target="_blank">Cllr Angela Sutton</a></td>
+                    </tr>
+                    <tr>
+                        <th>Party</th>
+                        <td>Reform</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><a href="mailto:CllrAngela.Sutton@rochford.gov.uk">CllrAngela.Sutton@rochford.gov.uk</a></td>
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td><a href="tel:07414248544">07414248544</a></td>
+                    </tr>
+                </tbody>
+            </table><br />
+            <br />
+            <!--
             <div class="line-break"></div>
-            <br />-->
             <br />
             <h3>Rochford District Council have drafted a<br /><span class="green" style="font-size: 1.6em;">GREEN BELT ASSESSMENT</span><br />proposing Lower Wyburns Farm as<br /><span class="red" style="font-size: 1.6em;">GREY BELT LAND</span></h3>
-            <h3><span id="1">Deadline for objections is</span><br /><span id="2" class="red" style="font-size: 1.6em;">27/8/2026</span><span id="3" style="display: none;"><br />(27/8/2026)</span></h3>
+            <h3><span id="1">Deadline for objections is</span><br /><span id="2" class="red" style="font-size: 1.6em;">7/9/2026</span><span id="3" style="display: none;"><br />(7/9/2026)</span></h3>
             <p>Rochford Council has commissioned a consultancy firm to carry out an assessment of all green belt land in the district, splitting it into parcels and proposing which should be designated as grey belt. It can be found here:</p>
             <div style="display: flex; justify-content: center; margin: 1em;">
                 <div style="width: fit-content; display: flex; flex-direction: column; gap: 1em;">
@@ -392,219 +625,7 @@
                 </tbody>
             </table><br />
             <br />
-            <div class="line-break"></div>
-            <br />
-            <h3>Bellway have submitted their<br /><span class="red" style="font-size: 1.6em;">PLANNING APPLICATION</span></h3>
-            <h3><span id="4">Deadline for objections is</span><br /><span id="5" class="red" style="font-size: 1.6em;">7/9/2026</span><span id="6" style="display: none;"><br />(7/9/2026)</span></h3>
-            <p>Bellway have submitted their planning application and supporting documents for 94 houses and flats to be built over Lower Wyburns Farm. It can be found here:</p>
-            <a class="button" href="https://maps.rochford.gov.uk/DevelopmentControl.aspx?RequestType=ParseTemplate&template=DevelopmentControlApplication&basepage=developmentcontrol.aspx&Filter=^REFVAL^=%2726/00538/FUL%27" target="_blank">See application details</a>
-            <a class="button" href="https://planningdocs.rochford.gov.uk/Planning/planning-documents?SDescription=26/00538/FUL" target="_blank">View planning documents</a><br />
-            <p>Please use the button below to object to application 26/00538/FUL</p>
-            <a class="button" href="https://maps.rochford.gov.uk/DevelopmentControl.aspx?requesttype=parsetemplate&template=DevelopmentControlApplicationComments.tmplt&basepage=developmentcontrol.aspx&Filter=^REFVAL^=%2726/00538/FUL%27" target="_blank">Click here to object</a><br />
-            <p>You can also email <a href="mailto:planning.applications@rochford.gov.uk">planning.applications@rochford.gov.uk</a> with your objection, as well as contacting local councillors, who are listed below:</p>
-            <table class="desktop-only">
-                <thead>
-                    <tr>
-                        <th>Person</th>
-                        <th>Party</th>
-                        <th>Email</th>
-                        <th>Mobile</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://www.rayleightowncouncil.gov.uk/people/dave-sperring/" target="_blank">Cllr Dave Sperring</a></td>
-                        <td>Conservative</td>
-                        <td><a href="mailto:CllrDave.Sperring@rochford.gov.uk">CllrDave.Sperring@rochford.gov.uk</a><br /><a href="mailto:CllrDave.Sperring@rayleightowncouncil.gov.uk">CllrDave.Sperring@rayleightowncouncil.gov.uk</a></td>
-                        <td><a href="tel:01268 774181">01268 774181</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=142" target="_blank">Cllr Ian Wilson</a></td>
-                        <td>Independent</td>
-                        <td><a href="mailto:CllrIan.Wilson@rochford.gov.uk">CllrIan.Wilson@rochford.gov.uk</a><br /><a href="mailto:CllrIan.Wilson@rayleightowncouncil.gov.uk">CllrIan.Wilson@rayleightowncouncil.gov.uk</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=139" target="_blank">Cllr Ian Ward</a></td>
-                        <td>Conservative</td>
-                        <td><a href="mailto:CllrIan.Ward@rochford.gov.uk">CllrIan.Ward@rochford.gov.uk</a><br /><a href="mailto:CllrIan.Ward@rayleightowncouncil.gov.uk">CllrIan.Ward@rayleightowncouncil.gov.uk</a></td>
-                        <td><a href="tel:07930 337598">07930 337598</a><br /><a href="tel:01268 770895">01268 770895</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=129" target="_blank">Cllr Robert Milne</a></td>
-                        <td>Independent</td>
-                        <td><a href="mailto:CllrBob.Milne@rochford.gov.uk">CllrBob.Milne@rochford.gov.uk</a><br /><a href="mailto:CllrRobert.Milne@rayleightowncouncil.gov.uk">CllrRobert.Milne@rayleightowncouncil.gov.uk</a></td>
-                        <td><a href="tel:07716 030781">07716 030781</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=108" target="_blank">Cllr James Newport</a></td>
-                        <td>Liberal Democrat</td>
-                        <td><a href="mailto:CllrJames.Newport@rochford.gov.uk">CllrJames.Newport@rochford.gov.uk</a><br /><a href="mailto:CllrJames.Newport@rayleightowncouncil.gov.uk">CllrJames.Newport@rayleightowncouncil.gov.uk</a></td>
-                        <td><a href="tel:07494226807">07494226807</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=109" target="_blank">Cllr Chris Stanley</a></td>
-                        <td>Liberal Democrat</td>
-                        <td><a href="mailto:CllrChris.Stanley@rochford.gov.uk">CllrChris.Stanley@rochford.gov.uk</a><br /><a href="mailto:CllrChris.Stanley@rayleightowncouncil.gov.uk">CllrChris.Stanley@rayleightowncouncil.gov.uk</a></td>
-                        <td><a href="tel:07720426359">07720426359</a><br /><a href="tel:01268 785732">01268 785732</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=110" target="_blank">Cllr Daniel Efde</a></td>
-                        <td>Conservative</td>
-                        <td><a href="mailto:CllrDaniel.Efde@rochford.gov.uk">CllrDaniel.Efde@rochford.gov.uk</a></td>
-                        <td><a href="tel:07983 983982">07983 983982</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=382" target="_blank">Cllr Angela Sutton</a></td>
-                        <td>Reform</td>
-                        <td><a href="mailto:CllrAngela.Sutton@rochford.gov.uk">CllrAngela.Sutton@rochford.gov.uk</a></td>
-                        <td><a href="tel:07414248544">07414248544</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="mobile-only">
-                <tbody>
-                    <tr>
-                        <th>Person</th>
-                        <td><a href="https://www.rayleightowncouncil.gov.uk/people/dave-sperring/" target="_blank">Cllr Dave Sperring</a></td>
-                    </tr>
-                    <tr>
-                        <th>Party</th>
-                        <td>Conservative</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><a href="mailto:CllrDave.Sperring@rochford.gov.uk">CllrDave.Sperring@rochford.gov.uk</a><br /><a href="mailto:CllrDave.Sperring@rayleightowncouncil.gov.uk">CllrDave.Sperring@rayleightowncouncil.gov.uk</a></td>
-                    </tr>
-                    <tr>
-                        <th>Mobile</th>
-                        <td><a href="tel:01268 774181">01268 774181</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Person</th>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=142" target="_blank">Cllr Ian Wilson</a></td>
-                    </tr>
-                    <tr>
-                        <th>Party</th>
-                        <td>Independent</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><a href="mailto:CllrIan.Wilson@rochford.gov.uk">CllrIan.Wilson@rochford.gov.uk</a><br /><a href="mailto:CllrIan.Wilson@rayleightowncouncil.gov.uk">CllrIan.Wilson@rayleightowncouncil.gov.uk</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Person</th>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=139" target="_blank">Cllr Ian Ward</a></td>
-                    </tr>
-                    <tr>
-                        <th>Party</th>
-                        <td>Conservative</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><a href="mailto:CllrIan.Ward@rochford.gov.uk">CllrIan.Ward@rochford.gov.uk</a><br /><a href="mailto:CllrIan.Ward@rayleightowncouncil.gov.uk">CllrIan.Ward@rayleightowncouncil.gov.uk</a></td>
-                    </tr>
-                    <tr>
-                        <th>Mobile</th>
-                        <td><a href="tel:07930 337598">07930 337598</a><br /><a href="tel:01268 770895">01268 770895</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Person</th>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=129" target="_blank">Cllr Robert Milne</a></td>
-                    </tr>
-                    <tr>
-                        <th>Party</th>
-                        <td>Independent</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><a href="mailto:CllrBob.Milne@rochford.gov.uk">CllrBob.Milne@rochford.gov.uk</a><br /><a href="mailto:CllrRobert.Milne@rayleightowncouncil.gov.uk">CllrRobert.Milne@rayleightowncouncil.gov.uk</a></td>
-                    </tr>
-                    <tr>
-                        <th>Mobile</th>
-                        <td><a href="tel:07716 030781">07716 030781</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Person</th>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=108" target="_blank">Cllr James Newport</a></td>
-                    </tr>
-                    <tr>
-                        <th>Party</th>
-                        <td>Liberal Democrat</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><a href="mailto:CllrJames.Newport@rochford.gov.uk">CllrJames.Newport@rochford.gov.uk</a><br /><a href="mailto:CllrJames.Newport@rayleightowncouncil.gov.uk">CllrJames.Newport@rayleightowncouncil.gov.uk</a></td>
-                    </tr>
-                    <tr>
-                        <th>Mobile</th>
-                        <td><a href="tel:07494226807">07494226807</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Person</th>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=109" target="_blank">Cllr Chris Stanley</a></td>
-                    </tr>
-                    <tr>
-                        <th>Party</th>
-                        <td>Liberal Democrat</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><a href="mailto:CllrChris.Stanley@rochford.gov.uk">CllrChris.Stanley@rochford.gov.uk</a><br /><a href="mailto:CllrChris.Stanley@rayleightowncouncil.gov.uk">CllrChris.Stanley@rayleightowncouncil.gov.uk</a></td>
-                    </tr>
-                    <tr>
-                        <th>Mobile</th>
-                        <td><a href="tel:07720426359">07720426359</a><br /><a href="tel:01268 785732">01268 785732</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Person</th>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=110" target="_blank">Cllr Daniel Efde</a></td>
-                    </tr>
-                    <tr>
-                        <th>Party</th>
-                        <td>Conservative</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><a href="mailto:CllrDaniel.Efde@rochford.gov.uk">CllrDaniel.Efde@rochford.gov.uk</a></td>
-                    </tr>
-                    <tr>
-                        <th>Mobile</th>
-                        <td><a href="tel:07983 983982">07983 983982</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>Person</th>
-                        <td><a href="https://rochford.moderngov.co.uk/mgUserInfo.aspx?UID=382" target="_blank">Cllr Angela Sutton</a></td>
-                    </tr>
-                    <tr>
-                        <th>Party</th>
-                        <td>Reform</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><a href="mailto:CllrAngela.Sutton@rochford.gov.uk">CllrAngela.Sutton@rochford.gov.uk</a></td>
-                    </tr>
-                    <tr>
-                        <th>Mobile</th>
-                        <td><a href="tel:07414248544">07414248544</a></td>
-                    </tr>
-                </tbody>
-            </table><br />
-            <br />
+            -->
             <div class="line-break"></div>
             <br />
             <h3><span class="red" style="font-size: 1.6em;">94 houses</span><br />are being proposed on<br />Lower Wyburns Farm,<br />Daws Heath Road.</h3>
@@ -642,7 +663,7 @@
             <div class="line-break"></div>
             <h3>How you can help:</h3>
             <p>Keep informed and get involved:</p>
-            <a class="button icon facebook" href="https://www.facebook.com/groups/1343149551169669" target="_blank">Join our Facebook group</a>
+            <a class="button icon facebook" href="https://www.facebook.com/groups/1343149551169669" target="_blank">Join this Facebook group</a>
             <a class="button icon mailing-list" href="https://forms.gle/3wzo9cixv8SEF26T8" target="_blank">Join our mailing list</a><br />
             <br />
             <div class="line-break"></div>

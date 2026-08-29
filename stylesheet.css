@@ -28,6 +28,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 8px;
+    overflow-x: hidden;
 }
 .container {
     width: 100%;
