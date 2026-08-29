@@ -40,28 +40,16 @@
                 document.getElementById("2").textContent = "";
             }
         });*/
-        var planningApplicationDeadline = new Date("2026-09-07");
-        var planningApplicationDays = Math.ceil((planningApplicationDeadline - currentDate) / (1000 * 60 * 60 * 24));
+        var planningApplicationDeadline = new Date("2026-09-07 00:00");
+        var planningApplicationDays = Math.floor((planningApplicationDeadline - currentDate) / (1000 * 60 * 60 * 24));
+        var planningApplicationHours = Math.floor((planningApplicationDeadline - currentDate) / (1000 * 60 * 60));
+        var planningApplicationMinutes = Math.floor((planningApplicationDeadline - currentDate) / (1000 * 60));
         document.addEventListener("DOMContentLoaded", function() {
-            if (planningApplicationDays >= 2) {
-                document.getElementById("4").textContent = "Deadline for objections is in";
-                document.getElementById("5").textContent = planningApplicationDays + " DAYS";
-                document.getElementById("6").style.display = "inline";
-            }
-            else if (planningApplicationDays == 1) {
-                document.getElementById("4").textContent = "Deadline for objections is";
-                document.getElementById("5").textContent = "TOMORROW";
-                document.getElementById("6").style.display = "inline";
-            }
-            else if (planningApplicationDays == 0) {
-                document.getElementById("4").textContent = "Deadline for objections is";
-                document.getElementById("5").textContent = "TODAY";
-                document.getElementById("6").style.display = "inline";
-            }
-            else {
-                document.getElementById("4").textContent = "Deadline for objections has passed";
-                document.getElementById("5").textContent = "";
-            }
+            document.getElementById("4").textContent = "Deadline for objections is in";
+            if (planningApplicationDays > 0) document.getElementById("5").textContent = planningApplicationDays + " DAY" + (planningApplicationDays > 1 ? "S" : "");
+            else if (planningApplicationHours > 0) document.getElementById("5").textContent = planningApplicationHours + " HOUR" + (planningApplicationHours > 1 ? "S" : "");
+            else document.getElementById("5").textContent = planningApplicationMinutes + " MINUTE" + (planningApplicationMinutes > 1 ? "S" : "");
+            document.getElementById("6").style.display = "inline";
         });
     </script>
     <style>
@@ -103,7 +91,7 @@
             <div class="line-break"></div>
             <br />
             <h3>Bellway have submitted their<br /><span class="red" style="font-size: 1.6em;">PLANNING APPLICATION</span></h3>
-            <h3><span id="4">Deadline for objections is</span><br /><span id="5" class="red" style="font-size: 1.6em;">7/9/2026</span><span id="6" style="display: none;"><br />(7/9/2026)</span></h3>
+            <h3><span id="4">Deadline for objections is</span><br /><span id="5" class="red" style="font-size: 1.6em;">end of day 6/9/2026</span><span id="6" style="display: none;"><br />(end of day 6/9/2026)</span></h3>
             <p>Bellway have submitted their planning application and supporting documents for 94 houses and flats to be built over Lower Wyburns Farm. It can be found here:</p>
             <a class="button" href="https://maps.rochford.gov.uk/DevelopmentControl.aspx?RequestType=ParseTemplate&template=DevelopmentControlApplication&basepage=developmentcontrol.aspx&Filter=^REFVAL^=%2726/00538/FUL%27" target="_blank">See application details</a>
             <a class="button" href="https://planningdocs.rochford.gov.uk/Planning/planning-documents?SDescription=26/00538/FUL" target="_blank">View planning documents</a><br />
