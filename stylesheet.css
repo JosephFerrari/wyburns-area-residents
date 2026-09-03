@@ -86,8 +86,8 @@ h4 {
 div.line-break {
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, transparent, #fff, transparent);
-    margin: 20px 0;
+    background: linear-gradient(to right, transparent, #aaa, transparent);
+    margin: 2em 0;
 }
 article {
     margin: 0 1em;
@@ -106,8 +106,9 @@ article > p a {
     font-style: italic;
     text-decoration: underline;
 }
-a.button {
+button, a.button {
     display: inline-block;
+    width: fit-content;
     padding: 15px 20px;
     margin:  0.5em 1em;
     background-color: #dd2424;
@@ -126,6 +127,7 @@ a.button.icon.facebook {
     background-image: url("icons/facebook.svg");
 }
 a.button.icon.mailing-list {
+    background-color: #179637;
     background-image: url("icons/envelope.svg");
 }
 a.document {
@@ -196,4 +198,31 @@ a:not(.button):not(.document):visited {
 a.no-style {
     text-decoration: inherit !important;
     color: inherit !important;
+}
+.rotate {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1em;
+    gap: 1em;
+}
+.rotate > * {
+    margin: 0 !important;
+}
+@media (max-width: 1024px) { /* tablet */
+
+}
+@media (max-width: 768px) { /* mobile */
+    @media (orientation: landscape) {
+        h2 br {
+            display: none;
+        }
+    }
+    .rotate {
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) { /* computer */
+    
 }

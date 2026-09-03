@@ -7,7 +7,7 @@
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
         <title>Wyburns Area Residents</title>
-        <link rel="stylesheet" href="stylesheet.css?v=7">
+        <link rel="stylesheet" href="stylesheet.css?v=8">
         <link rel="icon" type="image/png" href="/icons/favicon-96x96.png?v=2" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg?v=2" />
         <link rel="shortcut icon" href="/icons/favicon.ico?v=2" />
@@ -16,19 +16,24 @@
         <link rel="manifest" href="/icons/site.webmanifest?v=2" />
     </head>
     <script>
-        var currentDate = new Date();
-        var greenBeltAssessmentDeadline = new Date("2026-09-07");
-        var greenBeltAssessmentDays = Math.ceil((greenBeltAssessmentDeadline - currentDate) / (1000 * 60 * 60 * 24));
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("1a").style.display = "inline";
-            document.getElementById("1b").textContent = greenBeltAssessmentDays;
-        });
-        var planningApplicationDeadline = new Date("2026-09-07");
-        var planningApplicationDays = Math.ceil((planningApplicationDeadline - currentDate) / (1000 * 60 * 60 * 24));
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("2a").style.display = "inline";
-            document.getElementById("2b").textContent = planningApplicationDays;
-        });
+        var deadline = new Date("2026-09-07 00:00");
+        function refresh() {
+            var currentDate = new Date();
+            var timeRemaining = deadline - currentDate;
+            var daysRemaining = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            var hoursRemaining = Math.floor(timeRemaining / (1000 * 60 * 60)) % 24;
+            var minutesRemaining = Math.floor(timeRemaining / (1000 * 60)) % 60;
+            var countdownDays = daysRemaining + " day" + (daysRemaining == 1 ? "" : "s");
+            var countdownHours = hoursRemaining + " hour" + (hoursRemaining == 1 ? "" : "s");
+            var countdownMinutes = minutesRemaining + " minute" + (minutesRemaining == 1 ? "" : "s");
+            var countdown = document.getElementById("countdown");
+            if (daysRemaining > 0) countdown.textContent = "That's " + countdownDays + " and " + countdownHours + " remaining.";
+            else if (hoursRemaining > 0) countdown.textContent = "That's " + countdownHours + " and " + countdownMinutes + " remaining.";
+            else if (minutesRemaining > 0) countdown.textContent = "That's " + countdownMinutes + " remaining.";
+            else countdown.textContent = "The deadline has passed.";
+            setInterval(refresh, 5000);
+        }
+        document.addEventListener("DOMContentLoaded", refresh);
     </script>
     <style>
         body {
@@ -39,77 +44,35 @@
             font-size: 2em;
             margin-top: 0.5em;
         }
-        button, a.button {
-            width: fit-content;
-        }
-        .rotate {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        div.line-break {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        div.line-break p {
-            background: #000;
-            border: solid 0.3em #000;
-        }
-        .rotate {
-            height: 13em;
-        }
-        .rotate div:not(.line-break) {
-            padding: 1em;
-            flex-grow: 1;
-        }
-        @media (max-width: 1024px) { /* tablet */
-
-        }
-        @media (max-width: 768px) { /* mobile */
-            @media (orientation: landscape) {
-                h2 br {
-                    display: none;
-                }
-            }
-            .rotate {
-                flex-direction: column;
-                height: 29em;
-            }
-        }
-        @media (min-width: 768px) { /* computer */
-            .rotate div.line-break {
-                height: 100%;
-                width: 1px;
-                background: linear-gradient(to bottom, transparent, #fff, transparent);
-                margin: 0 20px;
-            }
-        }
     </style>
     <body>
         <div class="container">
             <h2><a class="no-style" href="https://wyburns-area-residents.org.uk">Wyburns <br />Area <br />Residents</a></h2>
             <div class="line-break"></div>
-            <p style="text-align: justify;">There are plans to build 94 houses and flats on Lower Wyburns Farm. This would mean potentially hundreds more cars using Daws Heath Road and worsening traffic on the Rayleigh Weir and A127. It would also increase stress on Rayleigh’s already overburdened public services, such as schools and GPs. We want to fight these plans, but we need your help. Please keep reading for a step by step guide on how to participate.</p>
-            <p style="text-align: justify;">We are fighting on two fronts. Firstly, a report has been drafted on behalf of Rochford Council that proposes Lower Wyburns Farm should be reclassified from Green Belt to Grey Belt. Secondly, a planning application has been submitted by Bellway to build 94 houses and flats on Lower Wyburns Farm. We need you to submit objections to both of these proposals. To find out how, please click one of the below buttons.</p>
+            <p style="text-align: justify;">There are plans to build 94 houses and flats on Lower Wyburns Farm. This would mean potentially hundreds more cars using Daws Heath Road and worsening traffic on the Rayleigh Weir and A127. It would also increase stress on Rayleigh's already overburdened public services, such as schools and GPs. We want to fight these plans, but we need your help. Please keep reading for a step by step guide on how to participate.</p>
             <div class="line-break"></div>
+            <h4 style="color: #fff;">
+                The last day for objections is
+                <br />
+                <span class="red" style="font-size: 1.6em;">Sunday August 6th</span>
+                <br />
+                <span id="countdown">Please submit by the end of this date.</span>
+            </h4>
+            <div class="line-break"></div>
+            <p style="text-align: justify;">We are fighting on two fronts. Firstly, a report has been drafted on behalf of Rochford Council that proposes Lower Wyburns Farm should be reclassified from Green Belt to Grey Belt. Secondly, a planning application has been submitted by Bellway to build 94 houses and flats on Lower Wyburns Farm. We need you to submit objections to both of these proposals. To find out how, please click one of the below buttons.</p>
+            <br />
             <div class="rotate">
-                <div>
-                    <a class="button" href="object/grey-belt">GREY BELT<br />OBJECTIONS<br />EASY GUIDE</a>
-                    <p>You have until 7/9/2026 to object.<span id="1a" style="display: none;"><br />That's <span id="1b"></span> days.</span></p>
-                </div>
-                <div class="line-break"><p>and</p></div>
-                <div>
-                    <a class="button" href="object/planning-application">PLANNING<br />OBJECTIONS<br />EASY GUIDE</a>
-                    <p>You have until 7/9/2026 to object.<span id="2a" style="display: none;"><br />That's <span id="2b"></span> days.</span></p>
-                </div>
+                <a class="button" href="object/development">PLANNING<br />OBJECTIONS<br />GUIDE</a>
+                <p>and</p>
+                <a class="button" href="object/grey-belt">GREY BELT<br />OBJECTIONS<br />GUIDE</a>
             </div>
             <div class="line-break"></div>
             <p>Please contact us if you have any questions:</p>
-            <p>Email: <a href="mailto:wyburnsactiongroup@gmail.com">wyburnsactiongroup@gmail.com</a></p>
-            <br />
-            <p><a href="https://wyburns-area-residents.org.uk">Click here</a> to visit our homepage.</p>
+            <p>Email: <a href="mailto:contact@wyburns-area-residents.org.uk">contact@wyburns-area-residents.org.uk</a></p>
+            <div class="line-break"></div>
+            <p>To stay informed and up to date, check this website reguarly and also do the following:</p>
+            <a class="button icon mailing-list" href="https://forms.gle/3wzo9cixv8SEF26T8" target="_blank">Join our mailing list</a>
+            <a class="button icon facebook" href="https://www.facebook.com/groups/1343149551169669" target="_blank">Join this Facebook group</a><br />
         </div>
     </body>
 </html>
