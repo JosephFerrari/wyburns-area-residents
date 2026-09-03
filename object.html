@@ -44,6 +44,33 @@
             font-size: 2em;
             margin-top: 0.5em;
         }
+        .rotate {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0 1em;
+            gap: 1em;
+        }
+        .rotate > * {
+            margin: 0 !important;
+        }
+        @media (max-width: 1024px) { /* tablet */
+
+        }
+        @media (max-width: 768px) { /* mobile */
+            @media (orientation: landscape) {
+                h2 br {
+                    display: none;
+                }
+            }
+            .rotate {
+                flex-direction: column;
+            }
+        }
+        @media (min-width: 768px) { /* computer */
+            
+        }
     </style>
     <body>
         <div class="container">
