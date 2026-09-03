@@ -111,7 +111,7 @@ button, a.button {
     width: fit-content;
     padding: 15px 20px;
     margin:  0.5em 1em;
-    background-color: #dd2424;
+    background-color: #cd1313;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -127,7 +127,7 @@ a.button.icon.facebook {
     background-image: url("icons/facebook.svg");
 }
 a.button.icon.mailing-list {
-    background-color: #179637;
+    background-color: #cd1313;
     background-image: url("icons/envelope.svg");
 }
 a.button.leaf {
