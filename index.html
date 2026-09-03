@@ -31,7 +31,7 @@
             else if (hoursRemaining > 0) countdown.textContent = "That's " + countdownHours + " and " + countdownMinutes + " remaining.";
             else if (minutesRemaining > 0) countdown.textContent = "That's " + countdownMinutes + " remaining.";
             else countdown.textContent = "The deadline has passed.";
-            setInterval(refresh, 5000);
+            //setInterval(refresh, 5000);
         }
         document.addEventListener("DOMContentLoaded", refresh);
     </script>
