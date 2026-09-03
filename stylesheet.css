@@ -141,6 +141,7 @@ a.document {
     background-position: 0 center;
     padding-left: calc(2em + 8px);
     background-size: 2em;
+    min-height: 2em;
 }
 a.document p {
     margin: 0;
@@ -158,6 +159,12 @@ a.document p i {
 }
 a.document.pdf {
     background-image: url("icons/filetype-pdf.svg");
+}
+a.document.pptx {
+    background-image: url("icons/filetype-pptx.svg");
+}
+a.document.docx {
+    background-image: url("icons/filetype-docx.svg");
 }
 a.document.news {
     background-image: url("icons/newspaper.svg");
