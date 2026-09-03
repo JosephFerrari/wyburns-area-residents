@@ -130,6 +130,9 @@ a.button.icon.mailing-list {
     background-color: #179637;
     background-image: url("icons/envelope.svg");
 }
+a.button.leaf {
+    background-color: #179637;
+}
 a.document {
     display: block;
     text-align: left;
